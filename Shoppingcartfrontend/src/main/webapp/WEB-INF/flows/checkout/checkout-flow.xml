@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation=
+      "http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+   <view-state id="shippingaddress" view="page1.jsp"> 
+   <transition on="pay" to="payment" ></transition>
+   
+   </view-state>
+   
+ <view-state id="payment" view="page2.jsp">
+  <transition on="pay" to="shippingaddress" ></transition>
+  <transition on="thanku" to ="process"></transition> 
+ </view-state>
+ 
+ <view-state id="process" view="page3.jsp">
+ 
+ </view-state>
+ 
+
+ 
+</flow>
